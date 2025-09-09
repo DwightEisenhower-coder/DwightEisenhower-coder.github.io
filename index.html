@@ -11,21 +11,29 @@
 
 
 #tank-container {
-    position: absolute;
-    top: 300px; /* wysokość czołgu na stronie */
-    width: 200px; /* szerokość GIF-a */
-    animation: moveTank 10s linear infinite; /* jedzie w kółko */
-}
-
-@keyframes moveTank {
-    0% { left: -250px; }
-    100% { left: 100%; }
+    position: fixed;
+    top: 50px;     /* odległość od góry */
+    right: 50px;   /* odległość od prawej krawędzi */
+    width: 120px;  /* szerokość GIF-a */
+    height: 120px;
+    animation: flyCircle 4s linear infinite; /* animacja w kółko */
 }
 
 #tank-container img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Animacja okręgu */
+@keyframes flyCircle {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-30px, 30px); }
+    50%  { transform: translate(0, 60px); }
+    75%  { transform: translate(30px, 30px); }
+    100% { transform: translate(0, 0); }
+}
+
 }
 
 
