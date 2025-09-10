@@ -4,8 +4,66 @@
         <title>Project: World War II - some cool CSS styles along with maybe some heroic stories</title>
         <meta charset="utf-8">
         <style>
-        
-        body {background-color: rgb(242, 242, 213);}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    background-color: rgb(242, 242, 213)
+  }
+
+  .card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .card-front img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+
+  .card-front h3 {
+    margin: 5px 0;
+  }
+
+  .card-back {
+    background-color: #f4f4f4;
+    transform: rotateY(180deg);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+
+            
+       
         p {background-color: rgb(222, 222, 86);}
         .capi-jajami {color:green;}
 table {
@@ -116,6 +174,47 @@ tbody tr:last-child td {
         
         <p><strong>x</strong> xxxxxxxxxxxxx
 </p>
+
+        <div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="stal.jpg" alt="Stalin">
+      <h3>Józef Stalin</h3>
+    </div>
+    <div class="card-back">
+      <p>Przywódca ZSRR w czasie II wojny światowej. Odpowiedzialny za masowe represje i kolektywizację.</p>
+      <p><em>"Nie ma ludzi, są tylko zadania."</em></p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="chur.jpg" alt="Churchill">
+      <h3>Winston Churchill</h3>
+    </div>
+    <div class="card-back">
+      <p>Premier Wielkiej Brytanii w czasie II wojny światowej. Znany ze swojego oratorskiego talentu i wytrwałości.</p>
+      <p><em>"Never, never, never give up."</em></p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="adolf.jpg" alt="Hitler">
+      <h3>Adolf Hitler</h3>
+    </div>
+    <div class="card-back">
+      <p>Kierownik III Rzeszy, inicjator II wojny światowej i odpowiedzialny za Holocaust.</p>
+      <p><em>"Kłamstwo powtarzane tysiąc razy staje się prawdą."</em></p>
+    </div>
+  </div>
+</div>
+
+        
         <h1><strong>Holocaust i zbrodnie wojenne</strong></h1>
     <p id="zydy"><em>
 W trakcie wojny doszło do systematycznej, państwowo zorganizowanej eksterminacji milionów ludzi — przede wszystkim Żydów, ale także Romów, niepełnosprawnych, osób LGBT, opozycjonistów politycznych i wielu innych grup.<br> To jeden z najważniejszych i najtrudniejszych tematów do zaprezentowania strony — wymaga szacunku, rzetelności i wiarygodnych źródeł.
