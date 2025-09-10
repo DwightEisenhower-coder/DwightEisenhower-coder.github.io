@@ -8,6 +8,40 @@
         body {background-color: rgb(242, 242, 213);}
         p {background-color: rgb(222, 222, 86);}
         .capi-jajami {color:green;}
+table {
+    width: 100%;
+    border-collapse: collapse; /* usuwa podwójne obramowania */
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* lekki cień */
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* naprzemienne kolory wierszy */
+}
+
+tbody tr:hover {
+    background-color: #ddd; /* efekt podświetlenia przy najechaniu */
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+tbody tr:last-child td {
+    border-bottom: none; /* usuwa linię pod ostatnim wierszem */
+}
 
 
 #tank-container {
