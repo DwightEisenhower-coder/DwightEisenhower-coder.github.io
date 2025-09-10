@@ -8,10 +8,16 @@
 body {
     background-color: rgb(242, 242, 213)
   }
+.biogramy-container {
+    display: flex;          /* ustawia dzieci w jednym wierszu */
+    justify-content: center; /* wyśrodkowanie poziome */
+    gap: 20px;               /* odstęp między kartami */
+    flex-wrap: wrap;         /* jeśli brak miejsca, karty przejdą do nowego wiersza */
+}
 
   .card {
-    width: 200px;
-    height: 300px;
+    width: 25%;
+    height: auto;
     perspective: 1000px;
     cursor: pointer;
   }
@@ -32,7 +38,7 @@ body {
   .card-front, .card-back {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;  /* zachowa proporcje obrazka */
     backface-visibility: hidden;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -169,7 +175,7 @@ tbody tr:last-child td {
         
         
 </p>
-
+<div class="biogramy-container">
         <div class="card">
   <div class="card-inner">
     <div class="card-front">
@@ -177,7 +183,7 @@ tbody tr:last-child td {
       <h3>Józef Stalin</h3>
     </div>
     <div class="card-back">
-      <p>Przywódca ZSRR w czasie II wojny światowej. Odpowiedzialny za masowe represje i kolektywizację.</p>
+      <p>Józef Stalin (1878–1953) był przywódcą Związku Radzieckiego i sekretarzem generalnym Komunistycznej Partii ZSRR. Kierował państwem w czasie II wojny światowej, odgrywając kluczową rolę w pokonaniu Niemiec na froncie wschodnim. Jednocześnie był odpowiedzialny za masowe represje i czystki w ZSRR. Znany cytat Stalina brzmi: „Nie ma ludzi, są tylko zadania.”</p>
       <p><em>"Nie ma ludzi, są tylko zadania."</em></p>
     </div>
   </div>
@@ -190,7 +196,7 @@ tbody tr:last-child td {
       <h3>Winston Churchill</h3>
     </div>
     <div class="card-back">
-      <p>Premier Wielkiej Brytanii w czasie II wojny światowej. Znany ze swojego oratorskiego talentu i wytrwałości.</p>
+      <p>Winston Churchill (1874–1965) był premierem Wielkiej Brytanii w latach 1940–1945 oraz 1951–1955. Kierował krajem podczas II wojny światowej i znany był ze swojej nieugiętej postawy wobec Niemiec oraz inspirujących przemówień, które mobilizowały naród do walki. Jego słynny cytat brzmi: „Never, never, never give up.”</p>
       <p><em>"Never, never, never give up."</em></p>
     </div>
   </div>
@@ -203,12 +209,12 @@ tbody tr:last-child td {
       <h3>Adolf Hitler</h3>
     </div>
     <div class="card-back">
-      <p>Kierownik III Rzeszy, inicjator II wojny światowej i odpowiedzialny za Holocaust.</p>
-      <p><em>"Kłamstwo powtarzane tysiąc razy staje się prawdą."</em></p>
+      <p>Adolf Hitler (1889–1945) był przywódcą Niemiec i Führerem III Rzeszy. Był inicjatorem II wojny światowej i odpowiedzialny za Holocaust oraz masowe zbrodnie wojenne. Jednym z jego znanych cytatów jest: „Kłamstwo powtarzane tysiąc razy staje się prawdą.”</p>
+      
     </div>
   </div>
 </div>
-
+</div>
         
         <h1><strong>Holocaust i zbrodnie wojenne</strong></h1>
     <p id="zydy">
