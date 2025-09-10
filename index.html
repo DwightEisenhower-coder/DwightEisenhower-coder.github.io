@@ -23,54 +23,48 @@ body {
 }
 
 
-  .card {
+ .card {
     width: 25%;
-    height: auto;
-      max-width: 250px; 
+    max-width: 250px;
     perspective: 1000px;
     cursor: pointer;
-  }
+    margin-bottom: 20px; /* odstęp od kolejnych elementów strony */
+}
 
-  .card-inner {
+.card-inner {
     position: relative;
     width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
+    transition: transform 0.8s;
+}
 
-  .card:hover .card-inner {
+.card:hover .card-inner {
     transform: rotateY(180deg);
-  }
+}
 
-  .card-front, .card-back {
-    position: absolute;
+.card-front, .card-back {
+    position: relative;       /* Zmiana z absolute na relative */
     width: 100%;
-    height: auto;  /* zachowa proporcje obrazka */
     backface-visibility: hidden;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
-      display: block; 
-  }
+    display: block;
+}
 
-  .card-front img {
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-  }
-
-  .card-front h3 {
-    margin: 5px 0;
-  }
-
-  .card-back {
-    background-color: #f4f4f4;
+.card-back {
     transform: rotateY(180deg);
+    background-color: #f4f4f4;
     padding: 10px;
     box-sizing: border-box;
-  }
+}
+
+.card-front img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 
 
             
