@@ -15,12 +15,18 @@ body {
     flex-wrap: wrap;
     margin: 40px 0;   /* odstęp od innych sekcji */
     padding: 10px;
+    overflow: hidden;
+}
+            
+* {
+    box-sizing: border-box;
 }
 
 
   .card {
     width: 25%;
     height: auto;
+      max-width: 250px; 
     perspective: 1000px;
     cursor: pointer;
   }
@@ -46,6 +52,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
+      display: block; 
   }
 
   .card-front img {
