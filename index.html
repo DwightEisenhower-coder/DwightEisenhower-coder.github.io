@@ -88,11 +88,19 @@ tbody tr:last-child td {
         <img src="https://s.yimg.com/ny/api/res/1.2/nxjmbY_TOWfvB8jJLQOFsw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTI0MDA7aD0xMzUwO2NmPXdlYnA-/https://media.zenfs.com/en/toms_guide_826/2236ad380cfd9a2a8990cf3ecb6a7608" alt="Hero Pitt" width="300">
 
             <div id="tank-container">
-            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWlvajI3bjM4YmlzNHE2M2MzM2Z0aXIxcnhubDk0NjVxeWR2N3I2ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EJsTKyvaYzvm8/giphy.gif" 
-         alt="Czołg z II wojny światowej" />
+            <img id="tank-image"  src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWlvajI3bjM4YmlzNHE2M2MzM2Z0aXIxcnhubDk0NjVxeWR2N3I2ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EJsTKyvaYzvm8/giphy.gif" 
+         alt="Czołg z II wojny światowej" style="cursor:pointer;" >
         </div>
+ <!-- Plik audio w tym samym folderze -->
+    <audio id="music" src="lionheart.mp3"></audio>
+              <script>
+        const tankImage = document.getElementById("tank-image");
+        const music = document.getElementById("music");
 
-            
+        tankImage.addEventListener("click", () => {
+            music.play();
+        });
+    </script>
         </ol>
         
         <h2 id="?">Najważniejsze info o WWII</h2>
